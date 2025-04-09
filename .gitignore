@@ -1,12 +1,19 @@
+# Ignorar arquivos temporários e de cache
 __pycache__/
 *.pyc
-*.pkl
 *.log
-data/raw/
-data/processed/
-models/
-*.parquet
-venv/
 .DS_Store
 .ipynb_checkpoints/
-mlruns/
+
+# Ignorar o ambiente virtual
+venv/
+
+# Ignorar arquivos de tracking desnecessários
+*.pkl
+*.parquet
+
+# Se você quiser versionar esses diretórios abaixo, COMENTE ou REMOVA as linhas:
+# data/raw/
+# data/processed/
+# models/
+# mlruns/

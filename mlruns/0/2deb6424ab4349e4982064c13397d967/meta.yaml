@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/guilh/OneDrive/%C3%81rea%20de%20Trabalho/Preditor_de_Arremessos/mlruns/0/2deb6424ab4349e4982064c13397d967/artifacts
+end_time: 1744211135421
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 2deb6424ab4349e4982064c13397d967
+run_name: SplitDados
+run_uuid: 2deb6424ab4349e4982064c13397d967
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1744211135061
+status: 3
+tags: []
+user_id: guilh
