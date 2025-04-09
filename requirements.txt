@@ -1,0 +1,8 @@
+mlflow
+pycaret
+scikit-learn
+pandas
+streamlit
+matplotlib
+seaborn
+plotly
