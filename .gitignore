@@ -1,19 +1,12 @@
-# Ignorar arquivos temporários e de cache
+# Ignorar apenas arquivos que não quero subir
 __pycache__/
 *.pyc
 *.log
+*.parquet
 .DS_Store
 .ipynb_checkpoints/
 
-# Ignorar o ambiente virtual
-venv/
-
-# Ignorar arquivos de tracking desnecessários
-*.pkl
-*.parquet
-
-# Se você quiser versionar esses diretórios abaixo, COMENTE ou REMOVA as linhas:
-# data/raw/
-# data/processed/
+# NÃO ignore as pastas (você quer subir tudo agora)
+# data/
 # models/
 # mlruns/
