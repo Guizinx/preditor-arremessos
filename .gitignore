@@ -1,17 +1,2 @@
 # Ignorar ambientes virtuais
 venv/
-
-# Arquivos temporários
-__pycache__/
-*.pyc
-*.log
-.DS_Store
-.ipynb_checkpoints/
-
-# Dados sensíveis ou temporários
-data/raw/
-data/processed/
-models/
-mlruns/
-*.pkl
-*.parquet
