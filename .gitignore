@@ -1,12 +1,17 @@
-# Ignorar apenas arquivos que não quero subir
+# Ignorar ambientes virtuais
+venv/
+
+# Arquivos temporários
 __pycache__/
 *.pyc
 *.log
-*.parquet
 .DS_Store
 .ipynb_checkpoints/
 
-# NÃO ignore as pastas (você quer subir tudo agora)
-# data/
-# models/
-# mlruns/
+# Dados sensíveis ou temporários
+data/raw/
+data/processed/
+models/
+mlruns/
+*.pkl
+*.parquet
