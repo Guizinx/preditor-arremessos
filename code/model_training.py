@@ -1,17 +1,15 @@
 import pandas as pd
 import mlflow
-from pycaret.classification import *
+from pycaret.classification import setup, create_model, predict_model, pull, save_model
+from sklearn.metrics import log_loss
 import os
 
-import pandas as pd
-import mlflow
-from pycaret.classification import setup, create_model, predict_model, pull, save_model, load_model
 
 def treinar_modelo(path_train, nome_modelo_final="modelo_final"):
     df_train = pd.read_parquet(path_train)
 
     # Define o experimento no MLflow
-    mlflow.set_experiment("KobeModel")
+    mlflow.set_experiment("Treinamento")
 
     # Inicializa o ambiente do PyCaret
     setup(data=df_train, target='shot_made_flag', session_id=42, verbose=False)
@@ -46,14 +44,26 @@ def treinar_modelo(path_train, nome_modelo_final="modelo_final"):
 
     # Log do modelo final
     with mlflow.start_run(run_name="Modelo_Final"):
-        path_arquivo = save_model(modelo_final, nome_modelo_final)  # Ex: models/modelo_final.pkl
+        # Garantir que o diretório 'models' existe
+        output_dir = 'models'
+        if not os.path.exists(output_dir):
+            os.makedirs(output_dir)
+
+        # Salva o modelo final com o caminho correto
+        model_path = os.path.join(output_dir, f"{nome_modelo_final}.pkl")
+        model_saved = save_model(modelo_final, model_path)
+
         mlflow.log_param("modelo_escolhido", nome_modelo_escolhido)
         mlflow.log_metric("f1_score_final", f1_final)
-        os.makedirs("models", exist_ok=True)
-        model_pipeline, model_path = save_model(modelo_final, f"models/{nome_modelo_final}")
+
+        # Log do artefato com o caminho correto
         mlflow.log_artifact(model_path)
 
     return modelo_final
 
+
 if __name__ == "__main__":
-    treinar_modelo("data/processed/base_train.parquet")
+    treinar_modelo(
+        r"C:\Users\guilh\OneDrive\Área de Trabalho\Preditor_de_Arremessos\data\processed\base_train.parquet",
+        "modelo_final"  # Caminho correto para o nome do modelo final
+    )

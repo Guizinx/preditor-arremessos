@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/guilh/OneDrive/Área de Trabalho/Preditor_de_Arremessos/mlruns/521647041931916298/8f32917462ae435a901e7959fdeeb789/artifacts
+end_time: 1744667055011
+entry_point_name: ''
+experiment_id: '521647041931916298'
+lifecycle_stage: active
+run_id: 8f32917462ae435a901e7959fdeeb789
+run_name: Modelo_Final
+run_uuid: 8f32917462ae435a901e7959fdeeb789
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1744667054742
+status: 4
+tags: []
+user_id: guilh

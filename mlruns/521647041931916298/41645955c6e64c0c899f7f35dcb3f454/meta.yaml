@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/guilh/OneDrive/Área de Trabalho/Preditor_de_Arremessos/mlruns/521647041931916298/41645955c6e64c0c899f7f35dcb3f454/artifacts
+end_time: 1744667053435
+entry_point_name: ''
+experiment_id: '521647041931916298'
+lifecycle_stage: active
+run_id: 41645955c6e64c0c899f7f35dcb3f454
+run_name: Treinamento_Logistica
+run_uuid: 41645955c6e64c0c899f7f35dcb3f454
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1744667039797
+status: 3
+tags: []
+user_id: guilh
